@@ -2,8 +2,9 @@
 
 <div align="center">
 <h1>Hacker news custom UI</h1>
-![UI](./screenshot.png)
+<img src="./screenshot.png"/>
 </div>
+
 
 Made with :
 - Nextjs
