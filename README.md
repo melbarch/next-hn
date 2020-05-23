@@ -9,7 +9,8 @@ Made with :
 TODO :
 
 - [ ] Add header and footer
-- [ ] Add manifest
-- [ ] Add dark mode? 
+- [ ] Add manifest for pwa
+- [ ] Add SEO metas
+- [ ] Add dark mode (might be the default)
 
-Used API : https://node-hnapi.herokuapp.com/news?page=1
+Based on the [amazing API](https://github.com/cheeaun/node-hnapi/) of @cheeaun
