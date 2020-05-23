@@ -1,9 +1,16 @@
-# Hacker news custom UI
+
+
+<div align="center">
+<h1>Hacker news custom UI</h1>
+![UI](./screenshot.png)
+</div>
 
 Made with :
 - Nextjs
 - Tailwindcss
-- SWR 
+- SWR
+
+Made live on twitter, check out the [thread here](https://twitter.com/melbarchany/status/1264239873696940033)
 
 
 TODO :
