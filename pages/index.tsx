@@ -11,8 +11,9 @@ const fetcher = async (url: string) =>{
 
 const HomePage = () => {
   const { data, error } = useSWR(API_URL, fetcher)
-  if (error) return <div>failed to load</div>
-  if (!data) return <div>loading...</div>
+  console.log()
+  if (error) return <div className="text-center text-red-700 font-bold text-3xl">failed to load</div>
+  if (!data) return <div className="text-center text-gray-700">loading...</div>
   return (
     <div className="flex justify-center items-center flex-col">
       {data.map((item : any) =>
@@ -20,7 +21,7 @@ const HomePage = () => {
           key={item.id}
           url={item.url}
           title={item.title}
-          publishedDate={item.publishedDate}
+          publishedDate={item.time_ago}
           points={item.points}
           user={item.user}
         />
