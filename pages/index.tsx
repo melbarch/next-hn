@@ -1,22 +1,44 @@
+import PostCard from "../components/PostCard";
+
 const HomePage = () => {
+  const data = [
+    {
+      id: 5465,
+      url: "https://github.com/u2zv1wx/neut",
+      title: "Show HN: A dependently-typed programming language with static memory management",
+      publishedDate: "2 hours ago",
+      points: "141",
+      user: "u2zv1wx",
+    },
+    {
+      id: 5465,
+      url: "https://github.com/u2zv1wx/neut",
+      title: "Show HN: A dependently-typed programming language with static memory management",
+      publishedDate: "2 hours ago",
+      points: "141",
+      user: "u2zv1wx",
+    },
+    {
+      id: 5465,
+      url: "https://github.com/u2zv1wx/neut",
+      title: "Show HN: A dependently-typed programming language with static memory management",
+      publishedDate: "2 hours ago",
+      points: "141",
+      user: "u2zv1wx",
+    }
+  ]
   return (
     <div className="flex justify-center items-center flex-col">
-      <div className="my-3 p-3 lg:w-1/2 rounded-md shadow-md">
-        <a href="https://github.com/u2zv1wx/neut">
-          <h3 className="text-2xl font-bold">Show HN: A dependently-typed programming language with static memory management</h3>
-        </a>
-        <h5 className="text-gray-500">2 hours ago - 141 points</h5>
-        <h5 className="text-gray-500">by u2zv1wx </h5>
-      </div>
-
-      <div className="my-3 p-3 lg:w-1/2 rounded-md shadow-md">
-        <a href="https://github.com/u2zv1wx/neut">
-          <h3 className="text-2xl font-bold">Show HN: A dependently-typed programming language with static memory management</h3>
-        </a>
-        <h5 className="text-gray-500">2 hours ago - 141 points</h5>
-        <h5 className="text-gray-500">by u2zv1wx </h5>
-      </div>
-
+      {data.map(item =>
+        <PostCard
+          key={item.id}
+          url={item.url}
+          title={item.title}
+          publishedDate={item.publishedDate}
+          points={item.points}
+          user={item.user}
+        />
+      )}
     </div>
   );
 }
