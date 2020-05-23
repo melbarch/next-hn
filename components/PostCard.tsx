@@ -9,12 +9,12 @@ interface PostCardProps {
 
 const PostCard = ({ url, title, publishedDate, points, user }: PostCardProps) => (
   <div className="my-3 p-3 w-2/3 rounded-md shadow-md">
-    <a href={url}>
+    <a href={url} target="_blank" rel="noopener">
       <h3 className="text-2xl font-bold">{title}</h3>
     </a>
     <h5 className="text-gray-500">{publishedDate}</h5>
     <span className="flex justify-between" >
-      <h5 className="text-black-500">by {user} </h5>
+      <h5 className="text-black-500">by {user}</h5>
       <span className="flex">
         <h4>{points}</h4>
         <span className="fill-current text-yellow-500 h-8 w-8">
