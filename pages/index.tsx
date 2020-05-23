@@ -1,35 +1,21 @@
+import useSWR from 'swr';
 import PostCard from "../components/PostCard";
 
+const API_URL = 'https://node-hnapi.herokuapp.com/news?page=1';
+
+const fetcher = async (url: string) =>{
+  const res = await fetch(url);
+  const json = await res.json();
+  return json;
+}
+
 const HomePage = () => {
-  const data = [
-    {
-      id: 5465,
-      url: "https://github.com/u2zv1wx/neut",
-      title: "Show HN: A dependently-typed programming language with static memory management",
-      publishedDate: "2 hours ago",
-      points: "141",
-      user: "u2zv1wx",
-    },
-    {
-      id: 5465,
-      url: "https://github.com/u2zv1wx/neut",
-      title: "Show HN: A dependently-typed programming language with static memory management",
-      publishedDate: "2 hours ago",
-      points: "141",
-      user: "u2zv1wx",
-    },
-    {
-      id: 5465,
-      url: "https://github.com/u2zv1wx/neut",
-      title: "Show HN: A dependently-typed programming language with static memory management",
-      publishedDate: "2 hours ago",
-      points: "141",
-      user: "u2zv1wx",
-    }
-  ]
+  const { data, error } = useSWR(API_URL, fetcher)
+  if (error) return <div>failed to load</div>
+  if (!data) return <div>loading...</div>
   return (
     <div className="flex justify-center items-center flex-col">
-      {data.map(item =>
+      {data.map((item : any) =>
         <PostCard
           key={item.id}
           url={item.url}
