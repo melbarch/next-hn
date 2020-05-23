@@ -8,7 +8,7 @@ interface PostCardProps {
 }
 
 const PostCard = ({ url, title, publishedDate, points, user }: PostCardProps) => (
-  <div className="my-3 p-3 w-2/3 rounded-md shadow-md">
+  <div className="m-3 p-3 sm:w-2/3 rounded-md shadow-md">
     <a href={url} target="_blank" rel="noopener">
       <h3 className="text-2xl font-bold">{title}</h3>
     </a>
