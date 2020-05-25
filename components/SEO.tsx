@@ -6,7 +6,7 @@ const SEO = () => {
   const defaultTitle = "Top of Hacker News";
   const defaultDescription = "Threads that are currently trending on the front page of hacker news";
   const defaultOGURL = BASE_URL;
-  const defaultOGImage = `https://hn.melbarch.com/banner.png`;
+  const defaultOGImage = `${BASE_URL}/banner.png`;
   return (
     <Head>
       <meta charSet="UTF-8" />
@@ -32,6 +32,18 @@ const SEO = () => {
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@melbarchany" />
       <meta name="twitter:image" content={defaultOGImage} />
+
+      {/* GA */}
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71823101-3"></script>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+            
+              gtag('config', 'UA-71823101-3');`
+        }}
+      />
     </Head>
   )
 };
