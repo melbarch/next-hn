@@ -15,10 +15,10 @@ const PostCard = ({ url, title, publishedDate, points, user }: PostCardProps) =>
       <h5 className="text-gray-500">{publishedDate}</h5>
       <span className="flex justify-between" >
         <h5 className="text-black-500">by {user}</h5>
-        <span className="flex">
+        <span className="flex items-center">
           <h4>{points}</h4>
-          <span className="fill-current text-yellow-500 h-8 w-8">
-            <svg xmlns="http://www.w3.org/2000/svg">
+          <span className="fill-current text-yellow-500 h-5 w-5 ml-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <path d="M12 .587l3.668 7.568L24 9.306l-6.064 5.828 1.48 8.279L12 19.446l-7.417 3.967 1.481-8.279L0 9.306l8.332-1.151z" />
             </svg>
           </span>
