@@ -6,7 +6,7 @@ const SEO = () => {
   const defaultTitle = "Top of Hacker News";
   const defaultDescription = "Threads that are currently trending on the front page of hacker news";
   const defaultOGURL = BASE_URL;
-  const defaultOGImage = `./logo-top-hn.png`;
+  const defaultOGImage = `./banner.png`;
   return (
     <Head>
       <meta charSet="UTF-8" />
