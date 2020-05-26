@@ -19,6 +19,7 @@ const HomePage = () => {
       {data.map((item: any) =>
         <PostCard
           key={item.id}
+          id={item.id}
           url={item.url}
           title={item.title}
           publishedDate={item.time_ago}

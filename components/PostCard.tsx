@@ -1,5 +1,6 @@
 
 interface PostCardProps {
+  id: Number,
   url: string,
   title: string,
   publishedDate: string,
@@ -8,7 +9,7 @@ interface PostCardProps {
   commentsCount: Number
 }
 
-const PostCard = ({ url, title, publishedDate, points, user, commentsCount }: PostCardProps) => (
+const PostCard = ({ url, title, publishedDate, points, user, commentsCount, id }: PostCardProps) => (
   <div className="m-2 p-3 w-4/5 lg:w-2/3 rounded-md shadow-md bg-white">
     <h3>
       <a href={url} target="_blank" rel="noopener" className="text-2xl font-bold visited:text-gray-600">
@@ -18,7 +19,11 @@ const PostCard = ({ url, title, publishedDate, points, user, commentsCount }: Po
     <span className="flex justify-between" >
       <div className="flex text-sm">
         <h5 className="text-gray-500 mr-2">{publishedDate}</h5> |
-        <h5 className="text-black-500 mx-2">{commentsCount} comments</h5>
+        <h5 className="text-black-500 mx-2 hover:underline">
+          <a href={"https://news.ycombinator.com/item?id=" + id} target="_blank" rel="noopener">
+            {commentsCount} comments
+          </a>
+        </h5>
       </div>
       <span className="flex items-center">
         <h4>{points}</h4>
