@@ -1,6 +1,6 @@
 import App from 'next/app'
 import '../css/tailwind.css'
-import { SEO } from '../components/SEO'
+import SEO from '../components/SEO'
 
 export default class MyApp extends App {
   render() {
