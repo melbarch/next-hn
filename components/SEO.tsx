@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import React from "react";
 
 const SEO = () => {
   const BASE_URL = "https://hn.melbarch.com";

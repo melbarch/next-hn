@@ -11,7 +11,6 @@ const fetcher = async (url: string) => {
 
 const HomePage = () => {
   const { data, error } = useSWR(API_URL, fetcher)
-  console.log()
   if (error) return <div className="text-center text-red-700 font-bold text-3xl bg-gray-100">failed to load</div>
   if (!data) return <div className="text-center text-gray-700 bg-gray-100">loading...</div>
   return (
@@ -20,6 +19,8 @@ const HomePage = () => {
         <PostCard
           key={item.id}
           id={item.id}
+          postType={item.type}
+          domain={item.domain}
           url={item.url}
           title={item.title}
           publishedDate={item.time_ago}

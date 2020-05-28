@@ -1,6 +1,7 @@
 import App from 'next/app'
 import '../css/tailwind.css'
 import SEO from '../components/SEO'
+import Link from 'next/link'
 
 export default class MyApp extends App {
   render() {
@@ -11,16 +12,21 @@ export default class MyApp extends App {
         <SEO />
         <div className="flex flex-col justify-between bg-gray-100">
           <header className="flex justify-around items-center mt-3 mb-5 bg-gray-100 shadow-xs p-1">
-            <div className="flex items-center">
-              <img
-                className="h-8 mr-2"
-                src="./logo-top-hn.png"
-                alt="logo"
-              />
-              <span className="font-semibold">
-                Top of Hacker News
-              </span>
-            </div>
+            <Link href="/">
+              <a>
+                <div className="flex items-center">
+
+                  <img
+                    className="h-8 mr-2"
+                    src="./logo-top-hn.png"
+                    alt="logo"
+                  />
+                  <span className="font-semibold">
+                    Top of Hacker News
+                </span>
+                </div>
+              </a>
+            </Link>
             <a
               className="ml-5"
               href="https://github.com/melbarch/next-hn"
@@ -39,7 +45,7 @@ export default class MyApp extends App {
               </svg>
             </a>
           </header>
-          
+
           <Component {...pageProps} />
 
           <footer className="text-center mt-3 mb-5 bg-gray-100 shadow-xs p-1">
