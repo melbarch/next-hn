@@ -49,7 +49,7 @@ export default class MyApp extends App {
           <Component {...pageProps} />
 
           <footer className="text-center mt-3 mb-5 bg-gray-100 shadow-xs p-1">
-            Made with ❤ by <a href="https://twitter.com/melbarchany" target="_blank" className="cursor-pointer underline">@melbarchany</a>
+            Made with ❤ by <a href="https://twitter.com/melbarchany" rel="noopener" target="_blank" className="cursor-pointer underline">@melbarchany</a>
           </footer>
 
         </div>
