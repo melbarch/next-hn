@@ -1,8 +1,8 @@
 {
   "name": "Top of HN",
   "short_name": "HN",
-  "theme_color": "#2196f3",
-  "background_color": "#2196f3",
+  "theme_color": "#f26622",
+  "background_color": "#f26622",
   "display": "standalone",
   "Scope": "/",
   "start_url": "/",
