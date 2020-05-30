@@ -66,7 +66,7 @@ const SEO = () => {
       <meta name="msapplication-TileColor" content="#ffffff" />
       <meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png" />
       <meta name='msapplication-config' content='browserconfig.xml' />
-      <meta name='theme-color' content='#000000' />
+      <meta name='theme-color' content='#f26622' />
     </Head>
   )
 };

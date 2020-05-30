@@ -18,7 +18,7 @@ export default class MyApp extends App {
 
                   <img
                     className="h-8 mr-2"
-                    src="./logo-top-hn.png"
+                    src="favicons/favicon-32x32.png"
                     alt="logo"
                   />
                   <span className="font-semibold">
@@ -31,12 +31,13 @@ export default class MyApp extends App {
               className="ml-5"
               href="https://github.com/melbarch/next-hn"
               target="_blank"
-              rel="noopener"
+              rel="noreferrer noopener"
             >
               <svg
                 className="h-6"
                 viewBox="0 0 128 128"
                 xmlns="http://www.w3.org/2000/svg"
+                aria-label="github-logo"
               >
                 <g clipRule="evenodd">
                   <path fill="none" d="M0 0h128v128H0z" />
@@ -49,7 +50,7 @@ export default class MyApp extends App {
           <Component {...pageProps} />
 
           <footer className="text-center mt-3 mb-5 bg-gray-100 shadow-xs p-1">
-            Made with ❤ by <a href="https://twitter.com/melbarchany" rel="noopener" target="_blank" className="cursor-pointer underline">@melbarchany</a>
+            Made with ❤ by <a href="https://twitter.com/melbarchany" rel="noreferrer noopener" target="_blank" className="cursor-pointer underline">@melbarchany</a>
           </footer>
 
         </div>

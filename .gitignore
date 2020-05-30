@@ -9,5 +9,5 @@ node_modules
 .vercel
 
 # service worker
-**/public/workbox-*.js
-**/public/sw.js
+/public/sw*
+/public/workbox*

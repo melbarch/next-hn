@@ -72,12 +72,15 @@ const PostCard = ({ id, postType, url, domain, title, publishedDate, points, use
           </h3>
         </a>
       </div>
-      <span className="flex justify-between" >
+      <div className="flex items-center">
+        <div>{getIcon(iconType)}</div>|
+        <h5 className="text-black-500 text-sm ml-1">by <span className="font-semibold">{user}</span></h5>
+      </div>
+      <div className="flex justify-between" >
         <div className="flex text-sm">
-          <div className="mr-2">{getIcon(iconType)}</div> |
-          <h5 className="text-gray-500 mx-2">{publishedDate}</h5> |
+          <h5 className="text-gray-500 mr-2">{publishedDate}</h5> |
           <h5 className="text-black-500 mx-2 hover:underline">
-            <a href={"https://news.ycombinator.com/item?id=" + id} target="_blank" rel="noopener">
+            <a href={"https://news.ycombinator.com/item?id=" + id} target="_blank" rel="noreferrer noopener">
               {commentsCount} comments
             </a>
           </h5>
@@ -90,8 +93,7 @@ const PostCard = ({ id, postType, url, domain, title, publishedDate, points, use
             </svg>
           </span>
         </span>
-      </span>
-      <h5 className="text-black-500 text-sm">by <span className="font-semibold">{user}</span></h5>
+      </div>
     </div>
   )
 };
