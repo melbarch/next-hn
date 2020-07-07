@@ -73,26 +73,42 @@ const PostCard = ({ id, postType, url, domain, title, publishedDate, points, use
         </a>
       </div>
       <div className="flex items-center">
-        <div>{getIcon(iconType)}</div>|
-        <h5 className="text-black-500 text-sm ml-1">by <span className="font-semibold">{user}</span></h5>
+        <div>{getIcon(iconType)}</div>
+        {
+          postType != 'job' ?
+            <>
+              | <h5 className="text-black-500 text-sm ml-1">by <span className="font-semibold">{user}</span></h5>
+            </>
+            : ''
+        }
       </div>
       <div className="flex justify-between" >
         <div className="flex text-sm">
-          <h5 className="text-gray-500 mr-2">{publishedDate}</h5> |
-          <h5 className="text-black-500 mx-2 hover:underline">
-            <a href={"https://news.ycombinator.com/item?id=" + id} target="_blank" rel="noreferrer noopener">
-              {commentsCount} comments
-            </a>
-          </h5>
+          <h5 className="text-gray-500 mr-2">{publishedDate}</h5>
+          {
+            postType != 'job' ?
+              <>
+                | <h5 className="text-black-500 mx-2 hover:underline">
+                  <a href={"https://news.ycombinator.com/item?id=" + id} target="_blank" rel="noreferrer noopener">
+                    {commentsCount} comments
+                </a>
+                </h5>
+              </>
+              : ''
+          }
         </div>
-        <span className="flex items-center">
-          <h4>{points}</h4>
-          <span className="fill-current text-yellow-500 h-5 w-5 ml-1">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path d="M12 .587l3.668 7.568L24 9.306l-6.064 5.828 1.48 8.279L12 19.446l-7.417 3.967 1.481-8.279L0 9.306l8.332-1.151z" />
-            </svg>
-          </span>
-        </span>
+        {
+          postType != 'job' ?
+            <span className="flex items-center">
+              <h4>{points}</h4>
+              <span className="fill-current text-yellow-500 h-5 w-5 ml-1">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path d="M12 .587l3.668 7.568L24 9.306l-6.064 5.828 1.48 8.279L12 19.446l-7.417 3.967 1.481-8.279L0 9.306l8.332-1.151z" />
+                </svg>
+              </span>
+            </span>
+            : ''
+        }
       </div>
     </div>
   )
