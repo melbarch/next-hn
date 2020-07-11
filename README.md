@@ -16,6 +16,9 @@ Some features :
 
 Made live on twitter 👉 check out the [thread here](https://twitter.com/melbarchany/status/1264239873696940033)
 
+<a href="https://twitter.com/melbarchany" target="_blank">
+    <img alt="twitter account melbarchany" src="https://img.shields.io/twitter/follow/melbarchany.svg?style=social" />
+</a>
 
 ## License
 
