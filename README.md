@@ -2,7 +2,7 @@
 
 <div align="center">
 <h1>✨ Styled Hacker News UI ✨</h1>
-<img src="./screenshot.png"/>
+<img src="./demo.gif"/>
 </div>
 
 Some features :
