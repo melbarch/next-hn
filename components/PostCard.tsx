@@ -1,14 +1,14 @@
 
 interface PostCardProps {
-  id: Number,
+  id: number,
   postType: string,
   url: string,
   domain: string,
   title: string,
   publishedDate: string,
-  points: Number,
+  points: number,
   user: string,
-  commentsCount: Number
+  commentsCount: number
 }
 
 const getIcon = (type: string): JSX.Element => {
