@@ -1,10 +1,12 @@
 module.exports = {
-  purge: ["./pages/**/*.tsx", "./components/**/*.tsx"],
+  content: ["./pages/**/*.tsx", "./components/**/*.tsx"],
   theme: {
     extend: {},
   },
   variants: {
-    textColor: ['responsive', 'hover', 'focus', 'visited'],
+    extend: {
+      textColor: ['visited'],
+    },
   },
   plugins: [],
 };
